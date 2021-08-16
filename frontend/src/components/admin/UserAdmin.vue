@@ -2,26 +2,47 @@
   <div class="container">
     <div class="user-admin flex justify-center content-center">
       <div class="flex flex-col">
-        <h2 class="text-2xl text-black font-italic ">Nome:</h2>
-        <input
-          class="
-            appearance-none
-            bg-transparent
-            border-none
-            w-full
-            text-gray-700
-            mr-3
-            py-1
-            px-2
-            mb-4
-            mt-6
-            leading-tight
-            focus:outline-none
-          "
-          type="text"
-          placeholder="Jane Cooper"
-          aria-label="Full name"
-        />
+        <form class="w-full max-w-lg">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <label
+              class="
+                block
+                uppercase
+                tracking-wide
+                text-gray-700 text-xs
+                font-bold
+                mb-2
+              "
+              for="grid-first-name"
+            >
+              Nome:
+            </label>
+            <input
+              class="
+                appearance-none
+                bg-transparent
+                border-none
+                w-full
+                text-gray-700
+                mr-3
+                py-1
+                px-2
+                mb-4
+                mt-6
+                leading-tight
+                focus:outline-none
+              "
+              type="text"
+              placeholder="Informe o nome"
+              aria-label="Full name"
+            />
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6"></div>
+          <div class="flex flex-wrap -mx-3 mb-2">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0"></div>
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0"></div>
+          </div>
+        </form>
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div
             class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
