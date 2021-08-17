@@ -24,7 +24,8 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700 text-xl
+                text-gray-700
+                text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
@@ -44,7 +45,8 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                text-gray-700
+                text-xs
                 font-bold
                 mb-2
                 ml-12
@@ -59,7 +61,8 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700 text-xl
+                text-gray-700 
+                text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
@@ -78,6 +81,12 @@
         </form>
       </div>
     </div>
+      <div class="flex mt-6 mb-6 ">
+        <label class="flex items-center">
+          <input type="checkbox" class="form-checkbox">
+          <span class="ml-2 text-sm">Administrador</span>
+        </label>
+      </div>
       <div class="flex-row-reverse ml-16">
         <form class="w-full center max-w-lg mr-8">
           <div class="flex flex-row -mx-3 mb-6">
@@ -86,7 +95,8 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                text-gray-700 
+                text-xs
                 font-bold
                 mb-2
                 ml-12
@@ -101,7 +111,8 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700 text-xl
+                text-gray-700 
+                text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
@@ -121,7 +132,8 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                text-gray-700
+                text-xs
                 font-bold
                 mb-2
                 ml-12
@@ -136,7 +148,8 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700 text-xl
+                text-gray-700 
+                text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
