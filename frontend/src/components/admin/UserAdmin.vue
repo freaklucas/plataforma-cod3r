@@ -24,8 +24,7 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700
-                text-base
+                text-gray-700 text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
@@ -45,15 +44,14 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700
-                text-xs
+                text-gray-700 text-xs
                 font-bold
                 mb-2
                 ml-12
               "
               for="grid-first-name"
             >
-            Email:
+              Email:
             </label>
             <input
               class="
@@ -61,8 +59,7 @@
                 bg-transparent
                 border-none
                 w-full
-                text-gray-700 
-                text-base
+                text-gray-700 text-base
                 hover:bg-gray-200
                 rounded-full
                 mr-3
@@ -81,92 +78,133 @@
         </form>
       </div>
     </div>
-      <div class="flex mt-6 mb-6 ">
-        <label class="flex items-center">
-          <input type="checkbox" class="form-checkbox">
-          <span class="ml-2 text-sm">Administrador</span>
-        </label>
-      </div>
-      <div class="flex-row-reverse ml-16">
-        <form class="w-full center max-w-lg mr-8">
-          <div class="flex flex-row -mx-3 mb-6">
-            <label
-              class="
-                block
-                uppercase
-                tracking-wide
-                text-gray-700 
-                text-xs
-                font-bold
-                mb-2
-                ml-12
-              "
-              for="grid-first-name"
-            >
-              Senha:
-            </label>
-            <input
-              class="
-                appearance-none
-                bg-transparent
-                border-none
-                w-full
-                text-gray-700 
-                text-base
-                hover:bg-gray-200
-                rounded-full
-                mr-3
-                py-1
-                px-2
-                mb-2
-                mt-2
-                leading-tight
-                focus:outline-none
-              "
-              type="text"
-              placeholder="Informe o nome"
-              aria-label="Full name"
-            />
-            <label
-              class="
-                block
-                uppercase
-                tracking-wide
-                text-gray-700
-                text-xs
-                font-bold
-                mb-2
-                ml-12
-              "
-              for="grid-first-name"
-            >
+    <div class="flex mt-6 mb-6">
+      <label class="flex items-center">
+        <input type="checkbox" class="form-checkbox" />
+        <span class="ml-2 text-sm">Administrador</span>
+      </label>
+    </div>
+    <div class="flex-row-reverse ml-16">
+      <form class="w-full center max-w-lg mr-8">
+        <div class="flex flex-row -mx-3 mb-6">
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              ml-12
+            "
+            for="grid-first-name"
+          >
+            Senha:
+          </label>
+          <input
+            class="
+              appearance-none
+              bg-transparent
+              border-none
+              w-full
+              text-gray-700 text-base
+              hover:bg-gray-200
+              rounded-full
+              mr-3
+              py-1
+              px-2
+              mb-2
+              mt-2
+              leading-tight
+              focus:outline-none
+            "
+            type="text"
+            placeholder="Informe o nome"
+            aria-label="Full name"
+          />
+          <label
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-gray-700 text-xs
+              font-bold
+              mb-2
+              ml-12
+            "
+            for="grid-first-name"
+          >
             Confirme a senha:
-            </label>
-            <input
-              class="
-                appearance-none
-                bg-transparent
-                border-none
-                w-full
-                text-gray-700 
-                text-base
-                hover:bg-gray-200
-                rounded-full
-                mr-3
-                py-1
-                px-2
-                mb-2
-                mt-2
-                leading-tight
-                focus:outline-none
-              "
-              type="text"
-              placeholder="Informe o email"
-              aria-label="Full name"
-            />
-          </div>
-        </form>
-      </div>
+          </label>
+          <input
+            class="
+              appearance-none
+              bg-transparent
+              border-none
+              w-full
+              text-gray-700 text-base
+              hover:bg-gray-200
+              rounded-full
+              mr-3
+              py-1
+              px-2
+              mb-2
+              mt-2
+              leading-tight
+              focus:outline-none
+            "
+            type="text"
+            placeholder="Informe o email"
+            aria-label="Full name"
+          />
+        </div>
+        <div class="mb-4">
+          <button
+            type="submit"
+            class="
+              inline-flex
+              justify-center
+              py-2
+              px-5
+              border border-transparent
+              shadow-sm
+              text-sm
+              font-medium
+              rounded-md
+              text-white
+              bg-indigo-600
+              hover:bg-indigo-700
+              focus:outline-none
+              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+            "
+          >
+            Salvar
+          </button>
+          <button
+            type="submit"
+            class="
+              inline-flex
+              justify-center
+              py-2
+              px-4
+              ml-4
+              border border-transparent
+              shadow-sm
+              text-sm
+              font-medium
+              rounded-md
+              text-white
+              bg-gray-600
+              hover:bg-black
+              focus:outline-none
+              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+            "
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div
