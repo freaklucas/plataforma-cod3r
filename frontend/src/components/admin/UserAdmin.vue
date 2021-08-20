@@ -80,7 +80,12 @@
     </div>
     <div class="flex mt-6 mb-6">
       <label class="flex items-center">
-        <input type="checkbox" class="form-checkbox" />
+        <input
+          type="checkbox"
+          class="form-checkbox"
+          v-model="user.name"
+          required
+        />
         <span class="ml-2 text-sm">Administrador</span>
       </label>
     </div>
@@ -118,8 +123,8 @@
               leading-tight
               focus:outline-none
             "
-            type="text"
-            placeholder="Informe o nome"
+            type="password"
+            placeholder="Informe a senha"
             aria-label="Full name"
           />
           <label
@@ -153,8 +158,8 @@
               leading-tight
               focus:outline-none
             "
-            type="text"
-            placeholder="Informe o email"
+            type="password"
+            placeholder="Confirme a senha"
             aria-label="Full name"
           />
         </div>
@@ -173,10 +178,12 @@
               rounded-md
               text-white
               bg-indigo-600
-              hover:bg-indigo-700
+              hover:bg-indigo-800
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
             "
+            v-if="mode === 'save'"
+            @click="save"
           >
             Salvar
           </button>
@@ -199,8 +206,33 @@
               focus:outline-none
               focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
             "
+            @click="reset"
           >
             Cancelar
+          </button>
+          <button
+            type="submit"
+            v-if="mode === 'remove'"
+            class="
+              inline-flex
+              justify-center
+              py-2
+              px-4
+              ml-4
+              border border-transparent
+              shadow-sm
+              text-sm
+              font-medium
+              rounded-md
+              text-white
+              bg-red-400
+              hover:bg-red-800
+              focus:outline-none
+              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+            "
+            @click="remove"
+          >
+            Remover
           </button>
         </div>
       </form>
@@ -210,7 +242,7 @@
         <div
           class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
         >
-          <table class="min-w-full divide-y divide-gray-200">
+          <table class="min-w-full divide-y divide-gray-200" :fields="fields">
             <thead class="bg-gray-50">
               <tr>
                 <th
@@ -348,27 +380,41 @@
 
 <script>
 export default {
-  name: "UserAdmin",  
+  name: "UserAdmin",
   components: {},
   data: function () {
     return {
-      mode: 'save',
+      mode: "save",
       user: {},
       users: [],
       fields: [
-        { key: 'id', label: 'Código', sortable: true},
-        { key: 'name', label: 'Nome', sortable: true},
-        { key: 'email', label: 'E-mail', sortable: true},
-        { key: 'admin', label: 'Administrador', sortable: true,
-          formatter: value => value ? 'Sim' : 'Não'},
-        { key: 'actions', label: 'Ações'}
-      ]
+        { key: "id", label: "Código", sortable: true },
+        { key: "name", label: "Nome", sortable: true },
+        { key: "email", label: "E-mail", sortable: true },
+        {
+          key: "admin",
+          label: "Administrador",
+          sortable: true,
+          formatter: (value) => (value ? "Sim" : "Não"),
+        },
+        { key: "actions", label: "Ações" },
+      ],
     };
   },
   methods: {
     loadUsers() {
       this.users;
     },
+    reset() {
+      this.mode = 'save'
+      this.user = {}
+      this.loadUsers();
+    },
+    save() {
+      // const method = this.user.id ? 'put' : 'post'
+      // const id = this.user.id ? `${this.user.id}`: ''
+      // axios[method]()
+    }
   },
   mounted() {
     this.loadUsers();
