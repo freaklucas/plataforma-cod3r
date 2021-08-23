@@ -2,7 +2,8 @@
   <div class="container">
     <div class="user-admin flex">
       <div class="flex-nowrap ml-16">
-        <form class="w-full center max-w-lg mr-8">
+        <form class="w-full center max-w-lg mr-8"
+        >
           <div class="flex flex-row -mx-3 mb-6">
             <label
               class="
@@ -38,6 +39,7 @@
               type="text"
               placeholder="Informe o nome"
               aria-label="Full name"
+              v-model="newPeople"
             />
             <label
               class="
@@ -165,7 +167,7 @@
         </div>
         <div class="mb-4">
           <button
-            type="submit"
+            type="input"
             class="
               inline-flex
               justify-center
@@ -182,8 +184,7 @@
               focus:outline-none
               focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
             "
-            v-if="mode === 'save'"
-            @click="save"
+              @click="addNewPeople"
           >
             Salvar
           </button>
@@ -345,6 +346,7 @@ export default {
   data: function () {
     return {
       mode: "save",
+      newPeople: "",
       user: {},
       users: [
         { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX' },
@@ -368,6 +370,7 @@ export default {
       ]
     };
   },
+  props: ['names'],
   methods: {
     loadUsers() {
       this.users;
@@ -385,12 +388,22 @@ export default {
     },  
     remove() {
       // const id = this.user.id
+    },
+    addNewPeople() {
+    if(this.newPeople) {
+      this.users.push({
+        name: this.newPeople,
+        code: '007',
+        path:'Javascript/BackEnd/Node'
+      })
     }
+  }
+
   },
   mounted() {
     this.loadUsers();
   },
-};
+  };
 </script>
 
 <style>
