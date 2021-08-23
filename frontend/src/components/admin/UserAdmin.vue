@@ -167,7 +167,7 @@
         </div>
         <div class="mb-4">
           <button
-            type="input"
+            type="button"
             class="
               inline-flex
               justify-center
@@ -390,14 +390,14 @@ export default {
       // const id = this.user.id
     },
     addNewPeople() {
-    if(this.newPeople) {
-      this.users.push({
-        name: this.newPeople,
-        code: '007',
-        path:'Javascript/BackEnd/Node'
-      })
+      if(this.newPeople) {
+        this.users.push({
+          name: this.newPeople,
+          code: '007',
+          path:'Javascript/BackEnd/Node'
+        })
+      }
     }
-  }
 
   },
   mounted() {
