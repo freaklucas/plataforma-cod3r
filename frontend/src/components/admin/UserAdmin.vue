@@ -36,6 +36,7 @@
                 leading-tight
                 focus:outline-none
               "
+              
               type="text"
               placeholder="Informe o nome"
               aria-label="Full name"
@@ -75,6 +76,8 @@
               type="text"
               placeholder="Informe o email"
               aria-label="Full name"
+             
+              v-model="newEmailPeople"
             />
           </div>
         </form>
@@ -306,7 +309,7 @@
                         {{ people.name }}
                       </div>
                       <div class="text-sm text-gray-500">
-                        ciar.campo.de.email@example.com
+                        {{ people.email }}  
                       </div>
                     </div>
                   </div>
@@ -347,11 +350,12 @@ export default {
     return {
       mode: "save",
       newPeople: "",
+      newEmailPeople: "",
       user: {},
       users: [
-        { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX' },
-        { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX' },
-        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javascript/UI-UX' }
+        { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX', email: 'lucas@email.com' },
+        { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX', email: 'lucas2@gmail.com' },
+        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javas  cript/UI-UX', email: 'luc@gmail.com' }
       ],
       fields: [
         { key: "id", label: "Código", sortable: true },
@@ -365,9 +369,6 @@ export default {
         },
         { key: "actions", label: "Ações" },
       ],
-      publication: [
-        { content: ''}
-      ]
     };
   },
   props: ['names'],
@@ -381,10 +382,6 @@ export default {
       this.loadUsers();
     },
     save() {
-      // let addNewItem = {
-      //   content: this.publication.content
-      // };
-      // this.publication.push(newItem)
     },  
     remove() {
       // const id = this.user.id
@@ -393,17 +390,19 @@ export default {
       if(this.newPeople) {
         this.users.push({
           name: this.newPeople,
+          email: this.newEmailPeople,
           code: '007',
-          path:'Javascript/BackEnd/Node'
+          path:'Javascript/BackEnd/Node',
         })
       }
     }
-
   },
   mounted() {
     this.loadUsers();
+    console.log(this.newEmailPeople)
   },
   };
+
 </script>
 
 <style>
