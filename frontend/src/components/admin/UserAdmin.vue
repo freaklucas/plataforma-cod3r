@@ -291,6 +291,20 @@
                 >
                   Caminho
                 </th>
+                <th
+                  scope="col"
+                  class="
+                    px-6
+                    py-3
+                    text-left text-xs
+                    font-medium
+                    text-gray-500
+                    uppercase
+                    tracking-wider
+                  "
+                >
+                  Administrador
+                </th>
               </tr>
             </thead>
             <tbody v-for="people in users" v-bind:key="people" class="bg-white divide-y divide-gray-200">
@@ -333,6 +347,20 @@
                     {{people.path}}
                   </span>
                 </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span
+                    class="
+                      px-2
+                      inline-flex
+                      text-xs
+                      font-semibold
+                      bg-blue-100
+                      text-blue-800
+                    "
+                  >
+                    {{people.adm}}
+                  </span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -354,21 +382,9 @@ export default {
       newEmailPeople: "",
       user: {},
       users: [
-        { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX', email: 'lucas@email.com' },
-        { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX', email: 'lucas2@gmail.com' },
-        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javas  cript/UI-UX', email: 'luc@gmail.com' }
-      ],
-      fields: [
-        { key: "id", label: "Código", sortable: true },
-        { key: "name", label: "Nome", sortable: true },
-        { key: "email", label: "E-mail", sortable: true },
-        {
-          key: "admin",
-          label: "Administrador",
-          sortable: true,
-          formatter: (value) => (value ? "Sim" : "Não"),
-        },
-        { key: "actions", label: "Ações" },
+        { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX', email: 'lucas@email.com', adm: 'Sim' },
+        { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX', email: 'lucas2@gmail.com', adm: 'Sim' },
+        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javascript/UI-UX', email: 'luc@gmail.com', adm: 'Sim' }
       ],
     };
   },
@@ -394,6 +410,7 @@ export default {
           email: this.newEmailPeople,
           code: '007',
           path:'Javascript/BackEnd/Node',
+          adm: 'Não'
         })
       }
       this.$toasted.global.defaultSuccess()

@@ -3,12 +3,12 @@ import Toasted from 'vue-toasted';
 
 Vue.use(Toasted, {
     iconPack: 'fontawesome',
-    duration: 4000
+    duration: 5000
 })
 
 Vue.toasted.register(
      'defaultSuccess',
-     payload => !payload.msg ? 'Operação realidada com sucesso!' : payload.msg,
+     payload => !payload.msg ? 'Usuário registrado com sucesso!' : payload.msg,
      { type: 'success', icon: 'check' }
  )
 
