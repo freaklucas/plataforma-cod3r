@@ -14,7 +14,7 @@
                 font-popins
                 rounded-lg
                 bg-indigo-500
-                hover:bg-indigo-900
+                hover:bg-blue-900
                 shadow-lg
                 block
                 md:inline-block

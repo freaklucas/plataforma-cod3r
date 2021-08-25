@@ -343,6 +343,7 @@
 </template>
 
 <script>
+
 export default {
   name: "UserAdmin",
   components: {},
@@ -395,6 +396,7 @@ export default {
           path:'Javascript/BackEnd/Node',
         })
       }
+      this.$toasted.global.defaultSuccess()
     }
   },
   mounted() {
