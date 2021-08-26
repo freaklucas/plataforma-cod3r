@@ -291,7 +291,6 @@
                 >
                   Caminho
                 </th>
-<<<<<<< HEAD
                 <th
                   scope="col"
                   class="
@@ -319,8 +318,6 @@
                   "
                 >
                 </th>
-=======
->>>>>>> parent of 06cc078d... configurando adm e refatorando funcoes
               </tr>
             </thead>
             <tbody v-for="people in users" v-bind:key="people" class="bg-white divide-y divide-gray-200">
@@ -363,7 +360,6 @@
                     {{people.path}}
                   </span>
                 </td>
-<<<<<<< HEAD
                 <td class="px-6 py-4 whitespace-nowrap">
                   <span
                     class="
@@ -391,8 +387,6 @@
                   > 
                   </span>
                 </td>
-=======
->>>>>>> parent of 06cc078d... configurando adm e refatorando funcoes
               </tr>
             </tbody>
           </table>
