@@ -305,6 +305,19 @@
                 >
                   Administrador
                 </th>
+                <th
+                  scope="col"
+                  class="
+                    px-6
+                    py-3
+                    text-left text-xs
+                    font-medium
+                    text-gray-500
+                    uppercase
+                    tracking-wider
+                  "
+                >
+                </th>
               </tr>
             </thead>
             <tbody v-for="people in users" v-bind:key="people" class="bg-white divide-y divide-gray-200">
@@ -361,6 +374,19 @@
                     {{people.adm}}
                   </span>
                 </td>
+                <td>
+                  <span
+                    class="
+                      px-2
+                      inline-flex
+                      text-xs
+                      font-semibold
+                      bg-blue-100
+                      text-blue-800
+                    "
+                  > 
+                  </span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -388,21 +414,18 @@ export default {
       ],
     };
   },
-  props: ['names'],
+  props: {
+    task: { Type: Object, required: true }
+  },
+  computed: {
+    stateClass() { 
+      return {
+        pending: this.task.pending,
+        done: !this.task.pending
+      }
+    }
+  },
   methods: {
-    loadUsers() {
-      this.users;
-    },
-    reset() {
-      this.mode = 'save'
-      this.user = {}
-      this.loadUsers();
-    },
-    save() {
-    },  
-    remove() {
-      // const id = this.user.id
-    },
     addNewPeople() {
       if(this.newPeople) {
         this.users.push({
@@ -416,13 +439,6 @@ export default {
       this.$toasted.global.defaultSuccess()
     }
   },
-  mounted() {
-    this.loadUsers();
-    console.log(this.newEmailPeople)
-  },
-  };
+};
 
 </script>
-
-<style>
-</style>
