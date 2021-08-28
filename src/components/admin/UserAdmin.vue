@@ -338,39 +338,15 @@ export default {
   components: {},
   data: function () {
     return {
-      mode: "save",
-      newPeople: "",
-      newEmailPeople: "",
+      newPeople: '',
+      newEmailPeople: '',
       user: {},
       users: [
         { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX', email: 'lucas@email.com' },
         { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX', email: 'lucas2@gmail.com' },
-        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javas  cript/UI-UX', email: 'luc@gmail.com' }
-      ],
-      fields: [
-        { key: "id", label: "Código", sortable: true },
-        { key: "name", label: "Nome", sortable: true },
-        { key: "email", label: "E-mail", sortable: true },
-        {
-          key: "admin",
-          label: "Administrador",
-          sortable: true,
-          formatter: (value) => (value ? "Sim" : "Não"),
-        },
-        { key: "actions", label: "Ações" },
+        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javascript/UI-UX', email: 'luc@gmail.com' }
       ],
     };
-  },
-  props: {
-    task: { Type: Object, required: true }
-  },
-  computed: {
-    stateClass() { 
-      return {
-        pending: this.task.pending,
-        done: !this.task.pending
-      }
-    }
   },
   methods: {
     addNewPeople() {
