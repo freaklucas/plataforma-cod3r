@@ -83,17 +83,6 @@
         </form>
       </div>
     </div>
-    <div class="flex mt-6 mb-6">
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          class="form-checkbox"
-          v-model="user.name"
-          required
-        />
-        <span class="ml-2 text-sm">Administrador</span>
-      </label>
-    </div>
     <div class="flex-row-reverse ml-16">
       <form class="w-full center max-w-lg mr-8">
         <div class="flex flex-row -mx-3 mb-6">
@@ -291,33 +280,6 @@
                 >
                   Caminho
                 </th>
-                <th
-                  scope="col"
-                  class="
-                    px-6
-                    py-3
-                    text-left text-xs
-                    font-medium
-                    text-gray-500
-                    uppercase
-                    tracking-wider
-                  "
-                >
-                  Administrador
-                </th>
-                <th
-                  scope="col"
-                  class="
-                    px-6
-                    py-3
-                    text-left text-xs
-                    font-medium
-                    text-gray-500
-                    uppercase
-                    tracking-wider
-                  "
-                >
-                </th>
               </tr>
             </thead>
             <tbody v-for="people in users" v-bind:key="people" class="bg-white divide-y divide-gray-200">
@@ -358,33 +320,6 @@
                     "
                   >
                     {{people.path}}
-                  </span>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <span
-                    class="
-                      px-2
-                      inline-flex
-                      text-xs
-                      font-semibold
-                      bg-blue-100
-                      text-blue-800
-                    "
-                  >
-                    {{people.adm}}
-                  </span>
-                </td>
-                <td>
-                  <span
-                    class="
-                      px-2
-                      inline-flex
-                      text-xs
-                      font-semibold
-                      bg-blue-100
-                      text-blue-800
-                    "
-                  > 
                   </span>
                 </td>
               </tr>
