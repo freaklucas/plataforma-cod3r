@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h3 class="font-mono text-gray-800 mb-12 text-center">Registre-se como usuário</h3>
     <div class="user-admin flex">
       <div class="flex-nowrap ml-16">
         <form class="w-full center max-w-lg mr-8"
