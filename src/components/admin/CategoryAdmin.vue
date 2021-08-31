@@ -5,10 +5,11 @@
     </h3>
     <div class="flex">
       <div class="flex-nowrap ml-16">
-        <form class="w-full center max-w-lg mr-8">
+        <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-8">
           <div class="flex flex-row -mx-3 mb-6">
             <h3 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h3>
             <input
+              v-model="label"
               class="
                 appearance-none
                 bg-transparent
@@ -71,6 +72,7 @@
           <div class="mb-12 mt-8 pl-12">
             <button
               type="button"
+              v-on:click.prevent="saveList(list)"
               class="
                 inline-flex
                 justify-center
@@ -141,5 +143,28 @@
 <script>
 export default {
   name: "CategoryAdmin",
+  data() { 
+    return {
+      title: 'Lista de cadastro',
+      list: {
+        code: '',
+        name: '',
+        path: '',
+      }
+    } 
+  },
+  methods: {
+    saveList(list) {
+      let lists = localStorage.getItem('listsApp')
+      if(lists) {
+       lists = JSON.parse(lists)
+       lists.push(list)
+      }
+      else {
+        lists = [list]
+      }
+      localStorage.setItem('listsApp', JSON.stringify(lists))
+    }
+  },
 };
 </script>
