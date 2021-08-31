@@ -52,18 +52,20 @@
                 text-gray-700 text-xs
                 font-bold
                 mb-2
-                ml-12
                 h-12
+                ml-8
               "
             >
               <span class="text-gray-800 text-xs"> Categoria Pai: </span>
-                <div class="relative inline-block w-full text-gray-700">
+                <div class="relative inline-block w-full text-gray-700 mb-12">
                   <select class="
                     w-full h-10 pl-3 pr-6 text-base 
                     placeholder-gray-800 
                     border rounded-lg appearance-none 
                     focus:shadow-outline
                     font-bold
+                    rounded-full
+                    mt-2
                     " 
                     placeholder="Regular input"
                   >
