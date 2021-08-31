@@ -15,6 +15,7 @@
                 font-bold
                 mb-2
                 ml-12
+                h-12
               "
               for="grid-first-name"
             >
@@ -52,6 +53,7 @@
                 font-bold
                 mb-2
                 ml-12
+                h-12
               "
               for="grid-first-name"
             >
@@ -96,6 +98,7 @@
               font-bold
               mb-2
               ml-12
+              h-12
             "
             for="grid-first-name"
           >
@@ -131,6 +134,7 @@
               font-bold
               mb-2
               ml-12
+              h-12
             "
             for="grid-first-name"
           >

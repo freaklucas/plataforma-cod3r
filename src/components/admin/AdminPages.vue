@@ -19,7 +19,6 @@
         <Tab name="Categorias" selected="true" class="text-3xl font-bold">
           <ul>
             <li>
-              <h1 class="text-5xl font-bold">Categorias</h1>
               <category-admin />
             </li>
           </ul>
