@@ -7,25 +7,11 @@
       <div class="flex-nowrap ml-16">
         <form class="w-full center max-w-lg mr-8">
           <div class="flex flex-row -mx-3 mb-6">
-            <label
-              class="
-                block
-                uppercase
-                tracking-wide
-                text-gray-700 text-xs
-                font-bold
-                mb-2
-                ml-12
-                h-12
-              "
-            >
-              Nome:
-            </label>
+            <h3 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h3>
             <input
               class="
                 appearance-none
                 bg-transparent
-                border-none
                 w-full
                 text-gray-700 text-base
                 hover:bg-gray-200
@@ -34,7 +20,6 @@
                 py-1
                 px-2
                 mb-2
-                mt-2
                 leading-tight
                 focus:outline-none
               "
@@ -83,7 +68,7 @@
                 </div>
             </label>
           </div>
-          <div class="mb-4 mt-4 pl-12">
+          <div class="mb-12 mt-8 pl-12">
             <button
               type="button"
               class="
@@ -131,6 +116,25 @@
         </form>
       </div>
     </div>
+      <div class="flex mb-12">
+        <table class="roundend-t-sm text-sm w-5/6 mx-auto font-mono text-gray-800">
+          <tr class="text-left border-b-2 border-gray-300">
+            <th class="px-4 py-3">Código</th>
+            <th class="px-4 py-3">Nome</th>
+            <th class="px-4 py-3">Caminho</th>
+          </tr>
+          <tr class="bg-gray-100 border-b border-gray-200">
+            <td class="px-4 py-3">001</td>
+            <td class="px-4 py-3">Desenvolvimento mobile</td>
+            <td class="px-4 py-3">Lógica/Javascript/React Native</td>
+          </tr>
+          <tr class="bg-gray-100 border-b border-gray-200">
+            <td class="px-4 py-3">002</td>
+            <td class="px-4 py-3">Web</td>
+            <td class="px-4 py-3">Html/Css/Javascript</td>
+          </tr>
+        </table>
+      </div>
   </div>
 </template>
 
