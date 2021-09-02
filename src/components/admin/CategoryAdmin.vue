@@ -118,7 +118,7 @@
         </form>
       </div>
     </div>
-      <div class="flex mb-12">
+      <div class="flex mb-12" v-for="list in lists" :key="list">
         <table class="roundend-t-sm text-sm w-5/6 mx-auto font-mono text-gray-800">
           <tr class="text-left border-b-2 border-gray-300">
             <th class="px-4 py-3">Código</th>
@@ -145,6 +145,7 @@ export default {
   name: "CategoryAdmin",
   data() { 
     return {
+      lists: [],
       title: 'Lista de cadastro',
       list: {
         code: '',
@@ -152,6 +153,9 @@ export default {
         path: '',
       }
     } 
+  },
+  created() {
+      this.lists = localStorage.getItem('listsApp')
   },
   methods: {
     saveList(list) {
