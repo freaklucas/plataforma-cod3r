@@ -54,10 +54,11 @@
                   mt-2
                   " 
                   placeholder="Regular input"
+                  v-model="list.path"
                 >
-                  <option>Javascript</option>
-                  <option>Tailwind</option>
-                  <option>Typescript</option>
+                <option>Lógica/Java</option>
+                  <option>HTML/CSS/Tailwind</option>
+                  <option>Lógica/Typescript</option>
                 </select>
                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -132,7 +133,7 @@
           <tr class="bg-gray-100 border-b border-gray-200" v-for="list in lists" :key="list">
             <td class="px-4 py-3">001</td>
             <td class="px-4 py-3">{{list.name}}</td>
-            <td class="px-4 py-3">Lógica/Javascript/React Native</td>
+            <td class="px-4 py-3">{{ list.path }}</td>
           </tr>
         </table>
       </div>
