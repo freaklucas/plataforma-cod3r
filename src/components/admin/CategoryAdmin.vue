@@ -131,7 +131,7 @@
             <th class="px-4 py-3">Caminho</th>
           </tr>
           <tr class="bg-gray-100 border-b border-gray-200" v-for="list in lists" :key="list">
-            <td class="px-4 py-3">001</td>
+            <td class="px-4 py-3">{{ counter+=1 }}</td>
             <td class="px-4 py-3">{{list.name}}</td>
             <td class="px-4 py-3">{{ list.path }}</td>
           </tr>
@@ -152,7 +152,8 @@ export default {
         code: '',
         name: '',
         path: '',
-      }
+      },
+      counter: 0
     } 
   },
   created() {
@@ -170,7 +171,7 @@ export default {
       }
       this.lists = lists
       localStorage.setItem('listsApp', JSON.stringify(lists))
-    }
+    },
   },
 };
 </script>
