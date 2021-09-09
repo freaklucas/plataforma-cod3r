@@ -9,7 +9,7 @@
           <div class="flex flex-row -mx-3 mb-6">
             <h3 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h3>
             <input
-              v-model="label"
+              v-model="list.name"
               class="
               appearance-none
               bg-transparent
@@ -45,19 +45,19 @@
               <span class="text-gray-800 text-xs"> Categoria Pai: </span>
               <div class="relative inline-block w-full text-gray-700 mb-12">
                 <select class="
-                w-full h-10 pl-3 pr-6 text-base 
-                placeholder-gray-800 
-                border rounded-lg appearance-none 
-                focus:shadow-outline
-                font-bold
-                rounded-full
-                mt-2
-                " 
-                        placeholder="Regular input"
-                        >
-                        <option>Javascript</option>
-                        <option>Tailwind</option>
-                        <option>Typescript</option>
+                  w-full h-10 pl-3 pr-6 text-base 
+                  placeholder-gray-800 
+                  border rounded-lg appearance-none 
+                  focus:shadow-outline
+                  font-bold
+                  rounded-full
+                  mt-2
+                  " 
+                  placeholder="Regular input"
+                >
+                  <option>Javascript</option>
+                  <option>Tailwind</option>
+                  <option>Typescript</option>
                 </select>
                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -156,7 +156,6 @@ export default {
   },
   created() {
     this.lists = JSON.parse(localStorage.getItem('listsApp'))
-    console.log('aqui +' +this.lists)
   },
   methods: {
     saveList(list) {
