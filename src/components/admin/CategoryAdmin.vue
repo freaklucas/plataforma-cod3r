@@ -6,23 +6,21 @@
     <div class="flex">
       <div class="flex-nowrap ml-16">
         <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-8">
-          <div class="flex flex-row -mx-3 mb-6">
-            <h3 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h3>
+          <div class="flex flex-row -mx-5 mb-6">
+            <h2 class="block uppercase text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h2> <br>
             <input
               v-model="list.name"
               class="
-              appearance-none
-              bg-transparent
-              w-full
-              text-gray-700 text-base
-              hover:bg-gray-200
-              rounded-full
-              mr-3
-              py-1
-              px-2
-              mb-2
-              leading-tight
-              focus:outline-none
+                appearance-none
+                bg-transparent
+                w-full
+                text-gray-700 text-base
+                hover:bg-gray-200
+                rounded-full
+                py-3
+                mt-6
+                leading-tight
+                focus:outline-none
               "
               type="text"
               placeholder="Informe o nome"
