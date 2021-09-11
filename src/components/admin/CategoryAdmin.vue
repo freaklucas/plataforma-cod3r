@@ -172,6 +172,7 @@ export default {
       }
       this.lists = lists
       localStorage.setItem('listsApp', JSON.stringify(lists))
+      this.$toasted.global.defaultSuccess()
     },
   },
 };
