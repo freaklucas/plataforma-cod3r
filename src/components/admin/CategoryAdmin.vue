@@ -4,10 +4,10 @@
       Registre uma categoria
     </h3>
     <div class="flex">
-      <div class="flex-nowrap ml-16">
-        <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-8">
-          <div class="flex flex-row -mx-5 mb-6">
-            <h2 class="block uppercase text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h2> <br>
+      <div class="flex-wrap ml-16">
+        <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-4">
+          <div class="flex-row  mb-2">
+            <h2 class="block uppercase text-gray-800 text-xs font-bold ml-8 h-18">Nome:</h2>
             <input
               v-model="list.name"
               class="
@@ -18,7 +18,8 @@
                 hover:bg-gray-200
                 rounded-full
                 py-3
-                mt-6
+                mt-2
+                ml-8
                 leading-tight
                 focus:outline-none
               "
@@ -38,6 +39,7 @@
               mb-2
               h-12
               ml-8
+              mt-6
               "
               >
               <span class="text-gray-800 text-xs"> Categoria Pai: </span>
@@ -50,6 +52,7 @@
                   font-bold
                   rounded-full
                   mt-2
+                  text-gray-600
                   " 
                   placeholder="Regular input"
                   v-model="list.path"
