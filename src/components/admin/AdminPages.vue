@@ -6,12 +6,11 @@
       sub="Cadastros e Cia"
       class="font-mono text-4xl"
     />
-    <div class="admin-pages-tabs">
+    <div class="admin-pages-tabs text-xl">
       <Tabs>
-        <Tab name="Artigos" selected="true">
+        <Tab name="Artigos" selected="true" class="font-bold text-3xl">
           <ul>
             <li>
-              <h1 class="text-5xl font-bold">Artigos</h1>
               <article-admin />
             </li>
           </ul>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3 class="font-mono text-gray-800 mb-12 text-center">Registre-se como usuário</h3>
+    <h3 class="font-mono text-gray-800 mb-12 text-center">Registre como usuário</h3>
     <div class="user-admin flex">
       <div class="flex-nowrap ml-16">
         <form class="w-full center max-w-lg mr-8"
@@ -88,81 +88,7 @@
     </div>
     <div class="flex-row-reverse ml-16">
       <form class="w-full center max-w-lg mr-8">
-        <div class="flex flex-row -mx-3 mb-6">
-          <label
-            class="
-              block
-              uppercase
-              tracking-wide
-              text-gray-700 text-xs
-              font-bold
-              mb-2
-              ml-12
-              h-12
-            "
-            for="grid-first-name"
-          >
-            Senha:
-          </label>
-          <input
-            class="
-              appearance-none
-              bg-transparent
-              border-none
-              w-full
-              text-gray-700 text-base
-              hover:bg-gray-200
-              rounded-full
-              mr-3
-              py-1
-              px-2
-              mb-2
-              mt-2
-              leading-tight
-              focus:outline-none
-            "
-            type="password"
-            placeholder="Informe a senha"
-            aria-label="Full name"
-          />
-          <label
-            class="
-              block
-              uppercase
-              tracking-wide
-              text-gray-700 text-xs
-              font-bold
-              mb-2
-              ml-12
-              h-12
-            "
-            for="grid-first-name"
-          >
-            Confirme a senha:
-          </label>
-          <input
-            class="
-              appearance-none
-              bg-transparent
-              border-none
-              w-full
-              text-gray-700 text-base
-              hover:bg-gray-200
-              rounded-full
-              mr-3
-              py-1
-              px-2
-              mb-2
-              mt-2
-              leading-tight
-              focus:outline-none
-            "
-            type="password"
-            placeholder="Confirme a senha"
-            aria-label="Full name"
-          />
-        </div>
-        <div class="mb-4">
+       <div class="mb-4 ml-16">
           <button
             type="button"
             class="

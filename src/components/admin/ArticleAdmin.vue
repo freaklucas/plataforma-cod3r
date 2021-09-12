@@ -1,7 +1,9 @@
 <template>
-    <div class="article-admin">
-      <h2 class="text-2xl font-bold">Alou?</h2>
-      <p>Esse é um exemplo por favor funcione</p>
+    <div class="article-admin font-mono">
+      <h3 class="font-mono text-gray-800 mb-12 text-center text-3xl">
+        Registre Artigos 
+    </h3>
+
     </div>
 </template>
 
