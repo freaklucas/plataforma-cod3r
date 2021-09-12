@@ -3,7 +3,9 @@
     <h3 class="font-mono text-gray-800 mb-12 text-center">Registre como usuário</h3>
     <div class="user-admin flex">
       <div class="flex-nowrap ml-16">
-        <form class="w-full center max-w-lg mr-8"
+        <form 
+          @submit.prevent="onSubmit"
+          class="w-full center max-w-lg mr-8"
         >
           <div class="flex flex-row -mx-3 mb-6">
             <label
@@ -42,7 +44,7 @@
               type="text"
               placeholder="Informe o nome"
               aria-label="Full name"
-              v-model="newPeople"
+              v-model="people.name"
             />
             <label
               class="
@@ -78,9 +80,8 @@
               "
               type="text"
               placeholder="Informe o email"
-              aria-label="Full name"
-             
-              v-model="newEmailPeople"
+              aria-label="Full name" 
+              v-model="people.email"
             />
           </div>
         </form>
@@ -90,6 +91,7 @@
       <form class="w-full center max-w-lg mr-8">
        <div class="mb-4 ml-16">
           <button
+            v-on:click.prevent="savePeople(people)"
             type="button"
             class="
               inline-flex
@@ -107,7 +109,6 @@
               focus:outline-none
               focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
             "
-              @click="addNewPeople"
           >
             Salvar
           </button>
@@ -133,30 +134,6 @@
             @click="reset"
           >
             Cancelar
-          </button>
-          <button
-            type="submit"
-            v-if="mode === 'remove'"
-            class="
-              inline-flex
-              justify-center
-              py-2
-              px-4
-              ml-4
-              border border-transparent
-              shadow-sm
-              text-sm
-              font-medium
-              rounded-md
-              text-white
-              bg-red-400
-              hover:bg-red-800
-              focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-            "
-            @click="remove"
-          >
-            Remover
           </button>
         </div>
       </form>
@@ -213,7 +190,7 @@
                 </th>
               </tr>
             </thead>
-            <tbody v-for="people in users" v-bind:key="people" class="bg-white divide-y divide-gray-200">
+            <tbody v-for="people in peoples" v-bind:key="people" class="bg-white divide-y divide-gray-200">
               <tr>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
@@ -235,14 +212,14 @@
                   </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="text-sm text-gray-900">{{people.code}}</div>
+                  <div class="text-sm text-gray-900">001</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <span
                     class="
                       px-2
                       inline-flex
-                      text-xs
+                      text-sm
                       leading-5
                       font-semibold
                       rounded-full
@@ -250,7 +227,7 @@
                       text-green-800
                     "
                   >
-                    {{people.path}}
+                    Js/Vuejs
                   </span>
                 </td>
               </tr>
@@ -269,29 +246,33 @@ export default {
   components: {},
   data: function () {
     return {
+      peoples: [],
       newPeople: '',
-      newEmailPeople: '',
-      user: {},
-      users: [
-        { name: 'Lucas Olliveira', code: '008', path: 'Vue/Javascript/UI-UX', email: 'lucas@email.com' },
-        { name: 'Lual Olliveira', code: '002', path: 'React/Javascript/UI-UX', email: 'lucas2@gmail.com' },
-        { name: 'Luc Olliveira', code: '009', path: 'Angular/Javascript/UI-UX', email: 'luc@gmail.com' }
-      ],
+      people: {
+        name: '',
+        email: '',
+      }, 
     };
   },
-  methods: {
-    addNewPeople() {
-      if(this.newPeople) {
-        this.users.push({
-          name: this.newPeople,
-          email: this.newEmailPeople,
-          code: '007',
-          path:'Javascript/BackEnd/Node',
-        })
-      }
-      this.$toasted.global.defaultSuccess()
-    }
+  created() {
+   this.peoples = JSON.parse(localStorage.getItem('listsPeople')) 
   },
-};
+  methods: {
+    savePeople(people) {
+      let peoples = localStorage.getItem('listsPeople')
+      if(peoples) {
+        peoples = JSON.parse(peoples)
+        peoples.push(people)
+      }
+      else {
+        peoples = [people]
+      }
+    
+      this.peoples = peoples
+      localStorage.setItem('listsPeople', JSON.stringify(peoples))
+      this.$toasted.global.defaultSuccess()
+    },
+  }
+}
 
 </script>
