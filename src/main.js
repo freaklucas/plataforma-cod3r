@@ -8,14 +8,16 @@ import './config/mensagens'
 
 import store from './config/store'
 import router from './config/router'
-
+import VueRouter from 'vue-router'
 
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 
+Vue.use(VueRouter)
+
 new Vue({
   store,
-  router,
+  router: router,
   render: h => h(App),
 }).$mount('#app')
