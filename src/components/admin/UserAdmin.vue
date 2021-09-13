@@ -24,6 +24,7 @@
               Nome:
             </label>
             <input
+              v-model="people.name"
               class="
                 appearance-none
                 bg-transparent
@@ -40,11 +41,9 @@
                 leading-tight
                 focus:outline-none
               "
-              
               type="text"
               placeholder="Informe o nome"
               aria-label="Full name"
-              v-model="people.name"
             />
             <label
               class="
@@ -62,6 +61,7 @@
               Email:
             </label>
             <input
+              v-model="people.email"
               class="
                 appearance-none
                 bg-transparent
@@ -81,7 +81,6 @@
               type="text"
               placeholder="Informe o email"
               aria-label="Full name" 
-              v-model="people.email"
             />
           </div>
         </form>
@@ -143,7 +142,7 @@
         <div
           class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
         >
-          <table class="min-w-full divide-y divide-gray-200" :fields="fields">
+          <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
                 <th
@@ -190,8 +189,8 @@
                 </th>
               </tr>
             </thead>
-            <tbody v-for="people in peoples" v-bind:key="people" class="bg-white divide-y divide-gray-200">
-              <tr>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr v-for="people in peoples" :key="people">
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
@@ -243,11 +242,9 @@
 
 export default {
   name: "UserAdmin",
-  components: {},
-  data: function () {
+  data() {
     return {
       peoples: [],
-      newPeople: '',
       people: {
         name: '',
         email: '',
@@ -255,7 +252,7 @@ export default {
     };
   },
   created() {
-   this.peoples = JSON.parse(localStorage.getItem('listsPeople')) 
+   this.peoples = JSON.parse(localStorage.getItem('listsPeople'))
   },
   methods: {
     savePeople(people) {
@@ -266,13 +263,13 @@ export default {
       }
       else {
         peoples = [people]
-      }
-    
+      } 
       this.peoples = peoples
       localStorage.setItem('listsPeople', JSON.stringify(peoples))
+
       this.$toasted.global.defaultSuccess()
     },
   }
-}
+};
 
 </script>
