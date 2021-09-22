@@ -4,10 +4,10 @@
       Registre uma categoria
     </h3>
     <div class="flex">
-      <div class="flex-wrap ml-16">
-        <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-4">
-          <div class="flex-row  mb-2">
-            <h2 class="block uppercase text-gray-800 text-xs font-bold ml-8 h-18">Nome:</h2>
+      <div class="flex-nowrap ml-16">
+        <form @submit.prevent="onSubmit" class="w-full center max-w-lg mr-8">
+          <div class="flex flex-row -mx-5 mb-6">
+            <h2 class="block uppercase text-gray-700 text-xs font-bold mb-2 ml-12 h-12">Nome:</h2> <br>
             <input
               v-model="list.name"
               class="
@@ -18,8 +18,7 @@
                 hover:bg-gray-200
                 rounded-full
                 py-3
-                mt-2
-                ml-8
+                mt-6
                 leading-tight
                 focus:outline-none
               "
@@ -39,7 +38,6 @@
               mb-2
               h-12
               ml-8
-              mt-6
               "
               >
               <span class="text-gray-800 text-xs"> Categoria Pai: </span>
@@ -52,7 +50,6 @@
                   font-bold
                   rounded-full
                   mt-2
-                  text-gray-600
                   " 
                   placeholder="Regular input"
                   v-model="list.path"
@@ -93,7 +90,7 @@
               "
               >
               Salvar
-            </button>
+            </button> 
             <button
               type="submit"
               class="
@@ -131,8 +128,8 @@
             <th class="px-4 py-3">Nome</th>
             <th class="px-4 py-3">Caminho</th>
           </tr>
-          <tr class="bg-gray-100 border-b border-gray-200" v-for="(list, idx) in lists" :key="idx">
-            <td class="px-4 py-3">01</td>
+          <tr class="bg-gray-100 border-b border-gray-200" v-for="list in lists" :key="list">
+            <td class="px-4 py-3">{{ counter+=1 }}</td>
             <td class="px-4 py-3">{{list.name}}</td>
             <td class="px-4 py-3">{{ list.path }}</td>
           </tr>
@@ -172,7 +169,6 @@ export default {
       }
       this.lists = lists
       localStorage.setItem('listsApp', JSON.stringify(lists))
-      this.$toasted.global.defaultSuccess()
     },
   },
 };
