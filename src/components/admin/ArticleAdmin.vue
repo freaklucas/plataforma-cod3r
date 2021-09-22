@@ -158,11 +158,11 @@
             </form>
           </div>
         </form>
-                  <div class="mb-12 mt-8 pl-12">
-            <button
-              type="button"
-              v-on:click.prevent="saveList(list)"
-              class="
+        <div class="mb-12 mt-8 pl-12">
+          <button
+            type="button"
+            v-on:click.prevent="saveList(list)"
+            class="
               inline-flex
               justify-center
               py-2
@@ -177,13 +177,13 @@
               hover:bg-indigo-800
               focus:outline-none
               focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
-              "
-              >
-              Salvar
-            </button> 
-            <button
-              type="submit"
-              class="
+            "
+          >
+            Salvar
+          </button>
+          <button
+            type="submit"
+            class="
               inline-flex
               justify-center
               py-2
@@ -199,11 +199,11 @@
               hover:bg-black
               focus:outline-none
               focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-              "
-              >
-              Cancelar
-            </button>
-          </div>
+            "
+          >
+            Cancelar
+          </button>
+        </div>
       </div>
     </div>
   </div>
