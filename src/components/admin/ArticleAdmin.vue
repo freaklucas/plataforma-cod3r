@@ -156,6 +156,40 @@
                 />
               </div>
             </form>
+            <h2
+              class="font-mono text-sm uppercase tracking-wide text-gray-700 mb-4"
+            >
+              Conteúdo
+            </h2>
+            <form
+              action=""
+              submit.prevent="onSubmit"
+              class="w-full center max-w-lg mr-8"
+            >
+              <div class="flex flex-row mb-2">
+                <input
+                  type="text"
+                  class="
+                    appearance-none
+                    bg-transparent
+                    border-none
+                    w-full
+                    h-full
+                    text-gray-700 text-base text-xs
+                    hover:bg-gray-200
+                    rounded-full
+                    mr-3
+                    py-8
+                    px-20
+                    leading-tight
+                    focus:outline-none
+                    mb-8
+                  "
+                  placeholder="Informe o texto do conteúdo aqui"
+                  aria-label="Full name"
+                />
+              </div>
+            </form>
           </div>
         </form>
         <div class="mb-12 mt-8 pl-12">
@@ -166,11 +200,11 @@
               inline-flex
               justify-center
               py-2
-              px-5
+              px-4
               border border-transparent
               shadow-sm
               text-sm
-              font-medium
+              font-bold
               rounded-md
               text-white
               bg-indigo-600
@@ -187,12 +221,12 @@
               inline-flex
               justify-center
               py-2
-              px-4
+              px-3
               ml-4
               border border-transparent
               shadow-sm
               text-sm
-              font-medium
+              font-bold
               rounded-md
               text-white
               bg-gray-600
