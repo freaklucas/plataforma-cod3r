@@ -246,5 +246,36 @@
 <script>
 export default {
   name: "ArticleAdmin",
+  data() {
+    return  {
+      articles: [],
+      article: {
+        name: '',
+        description: '',
+        category: '',
+        author: '',
+        content: ''
+      }
+    };
+  },
+  created() {
+    this.articles = JSON.parse(localStorage.getItem('listsArticle'))
+  },
+  methods: {
+    saveInfo(info) {
+      let infos = localStorage.getItem('listsArticle')
+      if(infos) {
+        infos = JSON.parse(infos)
+        infos.push(info)
+      }
+      else {
+        infos = [info]
+      }
+      this.infos = infos
+      localStorage.setItem('listsArticle', JSON.stringify(infos))
+
+      this.$toasted.global.defaultSuccess()
+    }
+  }
 };
 </script>
