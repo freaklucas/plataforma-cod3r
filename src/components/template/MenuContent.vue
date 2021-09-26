@@ -2,15 +2,15 @@
     <div class="menu-content">
         <a class="
             toggle text-decoration-none center flex 
-            hover:bg-green-600 transition duration-200 
+            hover:bg-gray-900 transition duration-200 
             focus-within:text-gray-600
             p-2 h-3/2
             " 
             @click="toggleMenu" v-if="!hideToggle"
         >
-            <i class="fa fa-lg" :class="icon"></i>
+            <i class="fa fa-lg mt-2" :class="icon"></i>
+            <h2 class="font-poppins text-xl text-white ml-12">Web moderno</h2>
         </a>
-        <h2 class="font-mono text-sm">Web moderno</h2>
     </div>
 </template>
 
