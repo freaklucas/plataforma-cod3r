@@ -1,6 +1,6 @@
 <template>
   <aside class="menu" v-show="isMenuVisible">
-      <menu-content />
+      <menu-content v-show="isMenuVisible"/>
   </aside>
 </template>
 

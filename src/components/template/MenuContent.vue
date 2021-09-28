@@ -11,8 +11,8 @@
             <i class="fa fa-lg mt-2" :class="icon"></i>
             <ul>
                 <li class="font-poppins text-xl text-white ml-12">Web Moderno</li>
-                <li>CSS</li>
-                <li>CSS Grid</li>
+                <li class="font-poppins text-lg text-white ml-12">CSS</li>
+                <li class="font-poppins text-sm text-white ml-12">CSS Grid</li>
             </ul>
         </a>
     </div>
