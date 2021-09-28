@@ -1,5 +1,5 @@
 <template>
-    <div class="menu-content">
+    <div class="menu-content flex flex-col">
         <a class="
             toggle text-decoration-none center flex 
             hover:bg-gray-900 transition duration-200 
@@ -9,15 +9,21 @@
             @click="toggleMenu" v-if="!hideToggle"
         >
             <i class="fa fa-lg mt-2" :class="icon"></i>
-            <h2 class="font-poppins text-xl text-white ml-12">Web moderno</h2>
+            <ul>
+                <li class="font-poppins text-xl text-white ml-12">Web Moderno</li>
+                <li>CSS</li>
+                <li>CSS Grid</li>
+            </ul>
         </a>
     </div>
 </template>
 
 
 <script>
+
     export default {
         name: 'MenuContent',
+        components: {},
         props: {
             hideToggle: Boolean,
         },
