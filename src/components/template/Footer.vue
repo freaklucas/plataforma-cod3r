@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer flex items-center justify-end pr-10">
+  <footer class="footer flex items-center justify-center pr-10">
       <span>Copyright &copy;<strong>2015-2021</strong></span>
   </footer>
 </template>
