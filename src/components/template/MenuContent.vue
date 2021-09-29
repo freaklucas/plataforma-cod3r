@@ -1,6 +1,7 @@
 <template>
   <div class="menu-content flex flex-col">
-    <a
+    <button
+      to="/articles"
       class="
         toggle
         text-decoration-none
@@ -13,6 +14,7 @@
         p-2
         h-3/2
       "
+      @click="this.$router.push({name: '/articles'})"
     >
       <ul>
         <li class="font-mono text-xl text-white ml-4 mb-2 mt-8">
@@ -21,8 +23,8 @@
         <li class="font-mono text-lg text-white ml-4 mb-2 mt-2">CSS</li>
         <li class="font-mono text-sm text-white ml-4">CSS Grid</li>
       </ul>
-    </a>
-    <a
+    </button>
+    <button
       class="
         toggle
         text-decoration-none
@@ -44,8 +46,8 @@
         <li class="font-mono text-lg text-white ml-4 mb-2 mt-2">Node js</li>
         <li class="font-mono text-sm text-white ml-4">MongoDB</li>
       </ul>
-    </a>
-        <a
+    </button>
+    <button
       class="
         toggle
         text-decoration-none
@@ -59,23 +61,35 @@
         h-3/2
         mt-2
       "
+      @click="visible = !visible"
     >
+      <content-article v-if="visible" />
       <ul>
         <li class="font-mono text-xl text-white ml-4 mb-2 mt-8">
           Programação Funcional
         </li>
         <li class="font-mono text-lg text-white ml-4 mb-2 mt-2">Arrow</li>
-        <li class="font-mono text-sm text-white ml-4 mb-2">Spread, Destructuring</li>
+        <li class="font-mono text-sm text-white ml-4 mb-2">
+          Spread, Destructuring
+        </li>
       </ul>
-    </a>
+    </button>
   </div>
 </template>
 
 
 <script>
+
+import ContentArticle from './ContentArticle.vue'
+
 export default {
   name: "MenuContent",
-  components: {},
+  data() {
+    return { 
+      visible: false
+    }
+  },
+  components: { ContentArticle },
   props: {
     hideToggle: Boolean,
   },
