@@ -16,7 +16,7 @@
           p-2
           h-3/2
         "
-        @click="this.$router.push({ name: '/articles' })"
+        @click="goToArticles()"
       >
         <ul>
           <li class="font-mono text-xl text-white ml-4 mb-2 mt-8">
@@ -87,6 +87,11 @@ export default {
   name: "Menu",
   components: {},
   computed: mapState(["isMenuVisible"]),
+  methods: {
+      goToArticles() {
+          this.$router.push('/articles')
+      }
+  }
 };
 </script>
 
