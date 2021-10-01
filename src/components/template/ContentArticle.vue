@@ -1,5 +1,5 @@
 <template>
-    <div class="home-article bg-gray-200 m-2">
+    <div class="home-article bg-gray-200 m-2 rounded">
         <h3 class=" font-medium text-3xl ml-16 center mt-2 mb-4 text-gray-700">Design Moderno</h3>
         <div class="flex center flex-nowrap bg-gray-200 m-2">
             <p class="text-xl font-light hover:bg-blue-200 mb-6">
