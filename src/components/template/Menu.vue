@@ -40,6 +40,7 @@
           h-3/2
           mt-2
         "
+        @click="goToArticles()"
       >
         <ul>
           <li class="font-mono text-xl text-white ml-4 mb-2 mt-8">
@@ -63,7 +64,8 @@
           h-3/2
           mt-2
         "
-        @click="visible = !visible"
+        @click="goToArticles()"
+
       >
         <content-article v-if="visible" />
         <ul>
