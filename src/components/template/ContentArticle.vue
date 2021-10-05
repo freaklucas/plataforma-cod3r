@@ -46,7 +46,6 @@
             focus:outline-none
             focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
             "
-            href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout"
             >
             Material completo
         </button>
@@ -59,7 +58,7 @@
                     "Node.js é um ambiente de execução multi-plataforma em JavaScript que permite aos desenvolvedores produzirem aplicaçõ               es para rede e server-side usando o JavaScript."
                 </p>
             </div>
-            <p class="text-lg font-medium text-gray-700 semibold mb-4 m-2">
+            <p class="text-lg font-medium text-gray-700 semibold mb-4 m-2"> 
                 O runtime de JavaScript é constituído pelos seguintes comandos: node package manager (npm), e npx (node package extractor); onde o primeiro tem o propósito de executar código armazenado num package de nodejs, instalando o software globalmente ou localmente, já o segundo tem o propósito de instalar a nível local o código instalado globalmente. Um exemplo disso é o npx create-react-app que tem como propósito instalar a nível local um template vazio de um site de react, pronto a ser usado, através de uma fórmula instalada com npm.
             </p>
             <div class="content-image flex justify-center m-2">
@@ -84,7 +83,6 @@
                 focus:outline-none
                 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
                 "
-                href=""
                 >
                 Material completo
             </button>
@@ -134,7 +132,6 @@
                 focus:outline-none
                 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
                 "
-                href=""
                 >
                 Material completo
             </button>
