@@ -44,7 +44,6 @@
             bg-gray-600
             hover:bg-gray-900
             focus:outline-none
-            focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
             "
             >
             Material completo
@@ -81,7 +80,6 @@
                 bg-blue-600
                 hover:bg-blue-900
                 focus:outline-none
-                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
                 "
                 >
                 Material completo
@@ -121,8 +119,6 @@
                 py-2
                 m-2
                 px-4
-                border border-transparent
-                shadow-sm
                 text-sm
                 font-mono
                 rounded-md
@@ -130,7 +126,6 @@
                 bg-red-600
                 hover:bg-red-800
                 focus:outline-none
-                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700
                 "
                 >
                 Material completo
