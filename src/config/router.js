@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from '@/components/home/Home'
 import AdminPages from '@/components/admin/AdminPages'
 import ContentArticle from '@/components/template/ContentArticle'
+import Login from '@/components/home/Login'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [{
         name: 'ContentArticles',
         path: '/articles',
         component: ContentArticle
+    },
+    { 
+        name: 'Login',
+        path: '/login',
+        component: Login
     }
 ]
 
