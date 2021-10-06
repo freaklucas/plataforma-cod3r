@@ -6,14 +6,14 @@
       sub="Base do Conhecimento"
       class="font-mono text-4xl mb-14 mt-14"
     />
-    <div class="stats flex justify-between flex-wrap">
+    <div class="stats flex justify-between flex-wrap p-2">
       <router-link to="/admin">
         <Stat
           title="Categorias"
           :value="stat.categories"
           icon="fa fa-folder"
           color="#d54d50"
-          class="font-bold text-base hover:bg-blue-100"
+          class="font-bold text-base hover:bg-red-100 rounded"
         />
       </router-link>
       <router-link to="/articles">
@@ -22,7 +22,7 @@
           :value="stat.articles"
           icon="fa fa-file"
           color="#3bc480"
-          class="font-bold text-base hover:bg-blue-100"
+          class="font-bold text-base hover:bg-green-100 rounded"
         />
       </router-link>
       <Stat
@@ -30,7 +30,7 @@
         :value="stat.users"
         icon="fa fa-user"
         color="#3282cd"
-        class="font-bold text-base hover:bg-blue-100"
+        class="font-bold text-base hover:bg-blue-100 rounded"
       />
     </div>
   </div>
