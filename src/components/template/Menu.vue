@@ -65,7 +65,6 @@
           mt-2
         "
         @click="goToArticles()"
-
       >
         <content-article v-if="visible" />
         <ul>
@@ -90,10 +89,10 @@ export default {
   components: {},
   computed: mapState(["isMenuVisible"]),
   methods: {
-      goToArticles() {
-          this.$router.push('/articles')
-      }
-  }
+    goToArticles() {
+      this.$router.push("/articles");
+    },
+  },
 };
 </script>
 

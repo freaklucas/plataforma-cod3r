@@ -1,37 +1,39 @@
 <template>
-  <div class="home">
+  <div class="home container">
     <page-title
       icon="fa fa-home"
       main="Dashboard"
       sub="Base do Conhecimento"
-      class="font-mono text-4xl mb-14 mt-14"
+      class="font-mono text-4xl mb-14 mt-8"
     />
-    <div class="stats flex justify-between flex-wrap p-2">
-      <router-link to="/admin">
-        <Stat
-          title="Categorias"
-          :value="stat.categories"
-          icon="fa fa-folder"
-          color="#d54d50"
-          class="font-bold text-base hover:bg-red-100 rounded"
-        />
-      </router-link>
-      <router-link to="/articles">
+    <div class="stats flex">
+      <Stat
+        title="Categorias"
+        :value="stat.categories"
+        icon="fa fa-folder"
+        color="#d54d50"
+        class="font-bold text-base hover:bg-red-100 rounded"
+      >
+        <router-link to="/admin"></router-link>
+      </Stat>
         <Stat
           title="Artigos"
           :value="stat.articles"
           icon="fa fa-file"
           color="#3bc480"
           class="font-bold text-base hover:bg-green-100 rounded"
-        />
-      </router-link>
-      <Stat
-        title="Usuarios"
-        :value="stat.users"
-        icon="fa fa-user"
-        color="#3282cd"
-        class="font-bold text-base hover:bg-blue-100 rounded"
-      />
+        >
+        <router-link to="/admin"></router-link>
+        </Stat>
+        <Stat
+          title="Usuarios"
+          :value="stat.users"
+          icon="fa fa-user"
+          color="#3282cd"
+          class="font-bold text-base hover:bg-blue-100 rounded"
+        >
+          <router-link to="/articles"></router-link>
+        </Stat>
     </div>
   </div>
 </template>
